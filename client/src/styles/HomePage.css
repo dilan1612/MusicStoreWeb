@@ -1,0 +1,262 @@
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 2rem;
+}
+
+.bg-animated {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #7f1d1d, black, #7f1d1d);
+}
+
+.bg-radial {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero.show {
+  transition: all 1s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero.hide {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.pulse-red {
+  display: block;
+  color: #ef4444;
+  animation: pulse 2s infinite;
+}
+.subtitle {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+.highlight {
+  color: #f87171;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .buttons {
+    flex-direction: row;
+  }
+}
+
+.btn-primary, .btn-secondary {
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border: 2px solid #f87171;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background-color: #dc2626;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #b91c1c;
+}
+.btn-secondary {
+  background: none;
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #ef4444;
+  color: black;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.featured h3,
+.categories h3 {
+  color: #f87171;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.cards, .category-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.category-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.card {
+  padding: 1.5rem;
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid #7f1d1d;
+  transition: all 0.3s ease;
+}
+.card.active {
+  transform: scale(1.05);
+  background-color: rgba(127,29,29,0.3);
+  border: 2px solid #ef4444;
+}
+.card:hover {
+  transform: scale(1.05);
+  border-color: #ef4444;
+}
+.card .emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.card h4 {
+  font-size: 1.25rem;
+  color: white;
+}
+.card .type,
+.card .category {
+  color: #f87171;
+  font-size: 0.875rem;
+}
+.card .price {
+  color: #fca5a5;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.add-cart {
+  margin-top: 1rem;
+  background-color: #dc2626;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.add-cart:hover {
+  background-color: #b91c1c;
+}
+
+.category-card {
+  background-color: rgba(0,0,0,0.6);
+  border: 2px solid #7f1d1d;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+.category-card:hover {
+  background-color: rgba(127,29,29,0.2);
+  border-color: #ef4444;
+}
+.category-card .emoji {
+  font-size: 2rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+.stat-card {
+  background-color: rgba(0,0,0,0.6);
+  border: 2px solid #7f1d1d;
+  padding: 1.5rem;
+  transition: border 0.3s;
+}
+.stat-card:hover {
+  border-color: #ef4444;
+}
+.stat-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #ef4444;
+}
+.stat-number {
+  font-size: 2rem;
+  color: #fca5a5;
+}
+.stat-label {
+  color: #d1d5db;
+}
+
+.newsletter {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid #7f1d1d;
+  background: linear-gradient(to right, #7f1d1d99, #00000099);
+}
+.newsletter h3 {
+  color: #f87171;
+}
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .newsletter-form {
+    flex-direction: row;
+  }
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 0.75rem;
+  background-color: black;
+  color: white;
+  border: 2px solid #7f1d1d;
+}
+.newsletter-form input:focus {
+  border-color: #ef4444;
+  outline: none;
+}
+.newsletter-form button {
+  background-color: #dc2626;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: 2px solid #f87171;
+  cursor: pointer;
+}
+.newsletter-form button:hover {
+  background-color: #b91c1c;
+}
+
+.floating-icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+}
+.floating-icon {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #ef4444;
+  animation: bounce infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
